@@ -8,6 +8,14 @@ import { styles } from './styles';
 
 export default function Input ({...rest}) {
  return (
-    <TextInput {...rest} style={styles.input}/>
+    <TextInput 
+    {...rest} 
+    keyboardAppearance='dark'
+    autoCorrect={false}
+    autoCapitalize='none'
+    autoComplete='off'
+    
+    style={styles.input}
+    />
   );
 }

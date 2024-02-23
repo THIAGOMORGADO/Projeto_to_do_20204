@@ -1,17 +1,25 @@
-import {  KeyboardAvoidingView, Platform, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import {  KeyboardAvoidingView, Platform, ScrollView, Text, View } from 'react-native';
 
-import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
+
 
 import {styles} from './styles'
 import Header from '../../components/Header';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
-import GoogleButton from '../../components/GoogleButton';
-import AppleButton from '../../components/AppleButton';
 import Footer from '../../components/Footer';
 import SocialButton from '../../components/AppleButton';
 
+import {useNavigation} from '@react-navigation/native'
+
 export default function SignIn() {
+  const navigation = useNavigation();
+
+  function handleSignIn() {
+    navigation.navigate('Home')
+  }
+  function handleNewAccouts() {
+    navigation.navigate('SignUp')
+  }
  return (
    <KeyboardAvoidingView 
     style={styles.container}
@@ -32,12 +40,12 @@ export default function SignIn() {
            style={styles.text}
         >Senha</Text>
         <Input  
-          placeholder='Adicionar uma nova tarefa'
+          placeholder='Digite seu password'
           placeholderTextColor="#808080" 
         />
 
         <View style={styles.btnArea}>
-          <Button /> 
+          <Button onPress={handleSignIn} nameButtonText='Entra'/> 
         </View>
       </View>
 
@@ -56,8 +64,11 @@ export default function SignIn() {
           onPress={() => console.log('Olá, eu sou o botão do apple')}
         />
      </View>
-
-     <Footer/>
+     <View style={styles.footer}>
+        <Footer nameText="Esqueceu a senha" />
+          <Text style={styles.FooterText}>/</Text>
+        <Footer nameText="Criar conta" onPress={handleNewAccouts}/>
+     </View>
    </KeyboardAvoidingView>
   );
 }

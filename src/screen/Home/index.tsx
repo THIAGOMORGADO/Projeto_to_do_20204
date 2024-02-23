@@ -76,10 +76,6 @@ export default function Home() {
           style={styles.input}
           placeholder='Adicionar uma nova tarefa'
           placeholderTextColor="#808080"
-          keyboardAppearance='dark'
-          autoCorrect={false}
-          autoCapitalize='none'
-          autoComplete='off'
           onChangeText={setTaskName}
           value={taskName}
         />
