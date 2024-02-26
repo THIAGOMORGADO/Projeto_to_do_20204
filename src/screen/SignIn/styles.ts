@@ -6,14 +6,18 @@ export const styles = StyleSheet.create({
   container: {
     backgroundColor: "#1a1a1a",
     flex:1,
-    
+      alignContent: 'center',
+      justifyContent: 'center',
   },
   form: {
-    
+    marginLeft: "10%",
+    alignContent: "center",
     justifyContent: "center",
-    
+    paddingBottom: 50,
+    flex:1,
     height: "50%",
-    padding: 50
+    width: "80%",
+    marginTop: 20
   },
   text: {
     color: "#f2f2f2",

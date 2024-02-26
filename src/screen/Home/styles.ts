@@ -13,13 +13,16 @@ export const styles = StyleSheet.create({
     justifyContent: "center"
   },
   form: {
+    width: "95%",
     flexDirection: 'row',
     marginTop: -25,
     paddingLeft: 20,
-    gap: 12
+    gap: 5,
   },
   input: {
-    width: 271,
+    width: 100,
+    
+    flex: 1,
     backgroundColor: "#262626",
     height: 54,
     borderRadius: 5,

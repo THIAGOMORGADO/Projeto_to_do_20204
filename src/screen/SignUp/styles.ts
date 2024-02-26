@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     
-    marginBottom: 30
+    marginBottom: 50
   },
   sectionText: {
     fontFamily: "Inter_700Bold",

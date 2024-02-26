@@ -97,7 +97,7 @@ export default function Home() {
         <View style={styles.done}>
           <Text style={styles.doneText}>Concluidas</Text>
           <View style={styles.countdone}>
-            <Text style={{ color: "#f2f2f2", fontSize: 14, fontFamily: 'Inter_700Bold' }}>{done}</Text>
+            <Text style={{ color: "#f2f2f2", fontSize: 14, fontFamily: 'Inter_700Bold', alignItems: "center", justifyContent: "center" }}>{done}</Text>
           </View>
         </View>
 

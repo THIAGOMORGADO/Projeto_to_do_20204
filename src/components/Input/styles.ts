@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     color: "#f2f2f2",
     fontFamily:'Inter_400Regular',
     fontSize: 16,
-    marginBottom: 25
+    marginBottom: 25,
+    
   },
 })
